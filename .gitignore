@@ -2,3 +2,6 @@ build/
 xcuserdata/
 main
 unicornleap.xcodeproj/project.xcworkspace/xcshareddata/
+.idea
+*.iml
+
