@@ -1,4 +1,4 @@
-program_name=unicornleap
+program_name=unileap
 image_folder=$(HOME)/.$(program_name)
 build_folder=build
 PREFIX ?= /usr/local
