@@ -1,1 +1,1 @@
-while true; do unileap -H -u images/buscemi.png -k images/buscemieyes.png; done
+while true; do unicornleap -H -u images/buscemi.png -k images/buscemieyes.png; done
