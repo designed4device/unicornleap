@@ -54,7 +54,14 @@ class UnicornImage: LeapImage {
     let day = Calendar.current.component(.day, from: now)
     let month = Calendar.current.component(.month, from: now)
     let year = Calendar.current.component(.year, from: now)
-    let eightOhSix = DateComponents(calendar: Calendar.current, year: year, month: month, day: day, hour:16, minute: 40).date ?? Date()
+    let eightOhSix = DateComponents(
+        calendar: Calendar.current,
+        year: year,
+        month: month,
+        day: day,
+        hour:8,
+        minute: 6)
+        .date ?? Date()
     
     if (now < eightOhSix) {
         if #available(OSX 10.12, *) {
@@ -69,6 +76,8 @@ class UnicornImage: LeapImage {
             let hours = String(totalSeconds / 60 / 60)
             label.string = "\(hours.pad()):\(minutes.pad()):\(seconds.pad())"
         }
+    } else if (now < eightOhSix.addingTimeInterval(TimeInterval(exactly: 30)!)) {
+        label.string = "hit the gong!"
     }
     
     layer.addSublayer(label)
